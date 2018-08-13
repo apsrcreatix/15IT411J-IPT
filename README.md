@@ -33,5 +33,5 @@ gcc -fPIC -I"/usr/java/jdk1.8.0_181/include" -I"/usr/java/jdk1.8.0_181/include/l
 java -Djava.library.path=. <name of java class file>
 ```
 
-[REFERENCE]: https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html	"REFERENCE FOR JNI"
+[REFERENCE FOR MORE CODE](https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html)
 
