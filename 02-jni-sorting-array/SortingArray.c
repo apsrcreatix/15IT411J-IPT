@@ -1,19 +1,9 @@
-#include "SortingArray.h"
-void swap(int *xp, int *yp)
+#include "SortingAay.h"
+// for qsort
+#include <stdlib.h> 
+int compare(const void * a, const void * b)
 {
-    int temp = *xp;
-    *xp = *yp;
-    *yp = temp;
-}
-void bubbleSort(int arr[], int n)
-{
-   int i, j;
-   for (i = 0; i < n-1; i++)      
- 
-       // Last i elements are already in place   
-       for (j = 0; j < n-i-1; j++) 
-           if (arr[j] > arr[j+1])
-              swap(&arr[j], &arr[j+1]);
+    return ( *(int*)a - *(int*)b );
 }
 JNIEXPORT jintArray JNICALL Java_SortingArray_sorting
   (JNIEnv *env, jobject thisObject, jintArray inJNIArray){
@@ -25,7 +15,7 @@ JNIEXPORT jintArray JNICALL Java_SortingArray_sorting
 	// sorting
   	jint sum = 0;
   	int i;
-  	bubbleSort(inCArray, length);
+  	qsort(inCArray,length,sizeof(int),compare);
   	// allocating space to new integer array for returning 
   	jintArray outJNIArray = (*env)->NewIntArray(env,length);
   	if(NULL==outJNIArray) return NULL ;
