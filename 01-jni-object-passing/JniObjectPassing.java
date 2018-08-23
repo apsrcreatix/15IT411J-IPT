@@ -2,10 +2,19 @@ public class JniObjectPassing{
 	static {
 		System.loadLibrary("JniObjectPassing");
 	}
-	// native function
-	private native double sum(int a,int b);
-	public static void main(String args[]){
-		System.out.println("In java, the sum is "+ new JniObjectPassing().sum(5,5));
-		
-	}
+private int value1 = 2;
+private int value2 = 1;
+private int sum ;
+
+ 
+   // Declare a native method that modifies the instance variables
+   private native void modifyInstanceVariable();
+ 
+   // Test Driver   
+   public static void main(String args[]) {
+      JniObjectPassing test = new JniObjectPassing();
+      test.modifyInstanceVariable();
+      System.out.println("Sum Passed from C language : " + test.sum);
+     
+   }
 }
