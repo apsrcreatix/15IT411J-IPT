@@ -8,7 +8,8 @@
 
 ## 1. Instructions for Java Native Interface
 
-> This section is for **[00-03]-[...]** titled experiments (==JNI  related experiments==) in this repository.
+> This section is only for **00-03** titled experiments (<span style="background-color: #FFff21">JNI related</span>
+) in this repository.
 
 ### 1.1 Requirements
 
