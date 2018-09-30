@@ -22,30 +22,90 @@
 
 **To run the program related java native interface follow the following commands for linux on terminal :**
 
-- Compile the java code.
+1. **Compile the java code.**
+  - **A**
+    - *Java* file name.
 
 ```bash
- javac <filename>.java
+ javac A.java
 ```
 
-- Create C/C++ header file.
+2. **Create C/C++ header file.**
+  - **A** 
+    - *class* file name.
 
 ```bash
-javah <Use the Java class file name without the “.class” extention>
+javah A
 ```
 
-- Create a shared library file using the C/C++ file created using terminal.
+3. **Create a shared library file using the C/C++ file created using terminal.**
+
+  - **A** 
+
+    - Put *lib* and then the name for the file written inside the .java file under static block. 
+
+    - Example - *JNIDemo.java*
+
+      - ```java
+        static
+        {
+        System.loadLibrary("JNIDemo");
+        }
+        ```
+
+        Then library file's name should be *libJNIDemo.so*
+
+  - **B**
+
+    - C file name.
+
+  - **How to get *jdk* folder path in linux**  
+
+    - If you don't have jdk1.8.0* then follow these commands if you are using ubuntu or any debian based distro : 
+
+      - ```bash
+        sudo apt-get update
+        ```
+
+        ```bash
+        sudo apt install default-jdk
+        ```
+
+        Enter password (if you have) and Press Y/y
+
+    - Go to root directory and search for jdk1.8.0 or a file jni.h
+
+    - You may get the folder then can copy the path for *include* folder and *linux* folder
 
 ```bash
-gcc -fPIC -I"/usr/java/jdk1.8.0_181/include" -I"/usr/java/jdk1.8.0_181/include/linux" --shared -o <the shared library file name you need/want to create>.so <C file name>.c
+gcc -fPIC -I"/usr/java/jdk1.8.0_181/include" -I"/usr/java/jdk1.8.0_181/include/linux" --shared -o A.so B.c
 ```
 
-- Run the java program.
+4. **Run the java program.**
+  -	**A**
+        -	Name of *class* file.
 
 ```bash
-java -Djava.library.path=. <name of java class file>
+java -Djava.library.path=. A
 ```
 
 ### 1.3 Reference
 
 [REFERENCE FOR MORE CODE](https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html)
+
+## 2. Instructions for Beans
+
+> This section will show you how to use these projects (04 - 07)
+
+### 2.1 Non Visual Bean Project 
+
+> For 04-jb-non-visual-bean
+
+- If you are a **IntelliJ IDEA** user then directly import the project or open this project in IDE.
+- If you are a **Netbeans** user then follow the steps :
+  - Create a new project.
+  - Choose JavaFx Application.
+  - Name the project whatever you want and finish.
+  - Go to workspace directory of Netbeans and delete *src* folder.
+  - Paste *src* folder from 04-jb-non-visual-bean
+  - Build and run the project now. 
