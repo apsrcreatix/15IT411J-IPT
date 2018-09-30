@@ -1,10 +1,12 @@
 # 15IT411J Integrative Programming And Technology Laboratory
 
 - [15IT411J Integrative Programming And Technology Laboratory](#15it411j-integrative-programming-and-technology-laboratory)
-    - [1. Instructions for Java Native Interface](#1-instructions-for-java-native-interface)
-        - [1.1 Requirements](#11-requirements)
-        - [1.2 Steps for output](#12-steps-for-output)
-        - [1.3 Reference](#13-reference)
+  - [1. Instructions for Java Native Interface](#1-instructions-for-java-native-interface)
+    - [1.1 Requirements](#11-requirements)
+    - [1.2 Steps for output](#12-steps-for-output)
+    - [1.3 Reference](#13-reference)
+  - [2. Instructions for Beans](#2-instructions-for-beans)
+    - [2.1 Non Visual Bean Project](#21-non-visual-bean-project)
 
 ## 1. Instructions for Java Native Interface
 
